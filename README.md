@@ -6,7 +6,7 @@ January 31, 2018
 
 Repository for the submission of the peer-graded assignment in Coursera's **Getting and Cleaning Data** course by Johns Hopkins University.
 
-##Repository Content
+## Repository Content
 
 * `README.md` - just this file, which provides an overview of the repository
 * `CodeBook.md` - desciption of the variables, the data, and any transformations or work done to clean up the data 
