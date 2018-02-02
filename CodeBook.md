@@ -42,7 +42,8 @@ The script is following the instructions for this coursera assignment:
    
 5. **From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.**
 
-   The data set finally has been agregated by 'activity_id' and 'subject_id' and for each aggregation pair the mean for all measurement variables is calculated.
+   The data set finally has been agregated by 'activity_id' and 'subject_id' and for each aggregation pair the mean for all measurement variables is calculated.  
+   The final data set is saved to `tidy_data.txt`.
 
 ## Variables in `tidy_data.txt`
 Aggreated data by 'activity_id' and 'subject_id'. The mean of all the measurements per aggregation is calculated. Please refer to the original [README.txt](https://github.com/tomfischersz/GettingAndCleaningData_CourseProject/blob/master/UCI%20HAR%20Dataset/README.txt) file for detailed information.

@@ -127,7 +127,7 @@ all_columns[grepl('mean\\(\\)|meanFreq\\(\\)', all_columns)]
 non_measurement_cols <- c('activity_id', 'subject_id')
 mean_cols <- all_columns[grepl('mean\\(\\)|meanFreq\\(\\)', all_columns)]
 std_cols <- all_columns[grepl('std\\(\\)', all_columns)]
-dim(all_data)
+
 # and subset the remaining columns
 all_data <- all_data[, c(mean_cols, std_cols, non_measurement_cols), 
                      with = FALSE]
@@ -141,7 +141,6 @@ names(activity_labels) <- c('activity_id','activity_name')
 
 # merge the data set with proper activity names
 all_data <- merge(all_data, activity_labels, by = c('activity_id'))
-# table(all_data$activity_id, all_data$activity_name)
 
 # original activity id's can be dropped
 all_data[, activity_id:=NULL]
@@ -164,7 +163,6 @@ rm(activity_labels)
 # From the data set in step 4, creates a second, independent tidy data set 
 # with the average of each variable for each activity and each subject.
 #-------------------------------------------------------------------------------
-dim(all_data)
 
 all_data_mean <-
     all_data %>%
