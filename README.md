@@ -23,9 +23,4 @@ The raw data namely consists of 561 attributes (already preprocessed measurement
 The labels were classified into six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING).
 
 ## Scipt Requirements <a name="SciptRequirements"></a>
-The R script `run_analysis.R` takes raw data as input and produces and tidy data set according to following instructions for this coursera assignment:
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive variable names. 
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+The R script `run_analysis.R` takes raw data as input and produces and tidy data set according to the instructions for this coursera assignment. More details you can find in the [CodeBook](https://github.com/tomfischersz/GettingAndCleaningData_CourseProject/blob/master/CodeBook.md) in this repository.
