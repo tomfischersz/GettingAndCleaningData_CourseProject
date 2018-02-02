@@ -21,7 +21,8 @@ Training and test data sets can be downloaded [here](https://d396qusza40orc.clou
 The script is following the instructions for this coursera assignment: 
 
 1. Merges the training and the test sets to create one data set.
-   Mergeing `test/X_test.txt` and `train/X_train.txt`.
+   
+   Mergeing `test/X_test.txt` and `train/X_train.txt`.  
    Adding column headers from `features.txt`.
    Adding the labels as new column from `train/y_train.txt` and `test/y_test.txt`
    Adding activity id's from `train/subject_train.txt` and `test/subject_test.txt`
