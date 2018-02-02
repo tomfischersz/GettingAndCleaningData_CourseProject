@@ -11,7 +11,6 @@
 require(data.table)
 require(dplyr)
 
-
 # all data for project can be found in this zip file:
 # https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
@@ -53,6 +52,7 @@ subject_train <- fread(file.path(data_folder,'train/subject_train.txt'))
 # - 'test/subject_test.txt': Each row identifies the subject who 
 #    performed the activity for each window sample. Its range is from 1 to 30.
 subject_test <- fread(file.path(data_folder,'test/subject_test.txt'))
+
 
 
 ## Steps 1 to 6 in this script follow the instructions for this coursera assignment
@@ -127,11 +127,12 @@ all_columns[grepl('mean\\(\\)|meanFreq\\(\\)', all_columns)]
 non_measurement_cols <- c('activity_id', 'subject_id')
 mean_cols <- all_columns[grepl('mean\\(\\)|meanFreq\\(\\)', all_columns)]
 std_cols <- all_columns[grepl('std\\(\\)', all_columns)]
-
+dim(all_data)
 # and subset the remaining columns
 all_data <- all_data[, c(mean_cols, std_cols, non_measurement_cols), 
                      with = FALSE]
 rm(non_measurement_cols, mean_cols, std_cols, all_columns)
+
 
 #----------------------- Step 3 ------------------------------------------------
 # Uses descriptive activity names to name the activities in the data set
@@ -145,6 +146,7 @@ all_data <- merge(all_data, activity_labels, by = c('activity_id'))
 # original activity id's can be dropped
 all_data[, activity_id:=NULL]
 rm(activity_labels)
+
 
 #----------------------- Step 4 ------------------------------------------------
 # Appropriately labels the data set with descriptive variable names. 
@@ -170,7 +172,6 @@ all_data_mean <-
     summarise_all(funs(mean)) %>%
     # ungroup %>%
     as.data.frame
-
 
 write.table(all_data_mean, 
             file = 'tidy_data.txt',
