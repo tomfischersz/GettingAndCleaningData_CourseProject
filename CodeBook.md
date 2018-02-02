@@ -31,8 +31,13 @@ The script is following the instructions for this coursera assignment:
    Features containing either the string 'std()', 'mean()' or 'meanFreq()' are extracted together with label 'activity_id' and identifier for the subjects 'subject_id'.  
    From 561 original measurement features 482 features were removed. 
 3. **Uses descriptive activity names to name the activities in the data set**
+
+   The descriptive activity names from `activity_labels.txt` were merged into the dat set.
 4. **Appropriately labels the data set with descriptive variable names.**
+
+   Nothing transformed. In my opinion there is no need to further transform the variable names, because there is no gain in ending in column names like:  
+   "frequencyDomainBodyBodyAccelerometerJerkMagnitudeStandardDeviation"
+   
 5. **From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.**
 
-## Variables and Summaries calculated in tidy data set
-
+   The data set finally has been agregated by 'activity_id' and 'subject_id' and for each aggregation pair the mean for all measurement variables is calculated.
